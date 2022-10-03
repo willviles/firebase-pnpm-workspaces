@@ -52,13 +52,16 @@ cp ./{.firebaserc,firebase.json} ./out
 cd ./out
 
 echo 'Installing dependencies'
-pnpm
+pnpm install
 
 echo 'Running Turbo build'
 pnpm turbo run build --filter=$FUNCTIONS_PACKAGE_NAME --include-dependencies --no-deps --no-cache
 
 echo 'Running firebase-pnpm-workspaces'
-npx firebase-pnpm-workspaces --filter=$FUNCTIONS_PACKAGE_NAME
+pnpm dlx firebase-pnpm-workspaces --filter=$FUNCTIONS_PACKAGE_NAME
+
+echo 'Resolve new package locations'
+pnpm i
 
 echo 'Deploying'
 firebase deploy --force --only functions
