@@ -9,7 +9,7 @@ Firebase functions [does not support deployment of dependencies from a monorepo 
 ## Solution
 
 ```bash
-npx firebase-pnpm-workspaces --scope <FIREBASE_FUNCTIONS_WORKSPACE_NAME>
+npx firebase-pnpm-workspaces --filter <FIREBASE_FUNCTIONS_WORKSPACE_NAME>
 ```
 
 This command, run at the root of your monorepo:
@@ -24,7 +24,7 @@ This command, run at the root of your monorepo:
 
 | Flag | Alias | Default | Required? | Description |
 | - | - | - | - | - |
-| --scope | -s | - | ✅ | Firebase functions workspace name. <br /> Example: <br /> `--scope functions`
+| --filter | -F | - | ✅ | Firebase functions workspace name. <br /> Example: <br /> `--scope functions`
 | --dir | -d | `process.cwd()` | ❌ | Path to workspace root  <br /> Example: <br /> `--dir ./out`
 | --tmpDir | -t | `.firebase-pnpm-workspaces` | ❌ | Custom tmp directory folder where dependency packages will be placed  <br /> Example: <br /> `--tmpDir custom-tmp-folder`
 
