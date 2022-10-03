@@ -1,0 +1,9 @@
+{
+  "branches": [
+    "main",
+    {
+      "name": "development",
+      "prerelease": true
+    }
+  ]
+}
