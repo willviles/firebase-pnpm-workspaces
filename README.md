@@ -9,7 +9,7 @@ Firebase functions [does not support deployment of dependencies from a monorepo 
 ## Solution
 
 ```bash
-npx firebase-pnpm-workspaces --scope <FIREBASE_FUNCTIONS_WORKSPACE_NAME>
+npx firebase-pnpm-workspaces --filter <FIREBASE_FUNCTIONS_WORKSPACE_NAME>
 ```
 
 This command, run at the root of your monorepo:
