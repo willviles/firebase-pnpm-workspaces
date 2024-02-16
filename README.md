@@ -1,5 +1,7 @@
 # firebase-pnpm-workspaces
 
+*** ⚠️ **This project is now archived. Please consider using [isolate-package](https://github.com/0x80/isolate-package) instead.** ***
+
 PNPM workspaces + Firebase deployments made easy.
 
 ## Problem
